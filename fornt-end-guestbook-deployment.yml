@@ -5,7 +5,7 @@ metadata:
   labels:
     app: guestbook-app
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       name: front-end-guestbook-pod
