@@ -5,14 +5,17 @@ metadata:
   labels:
     app: guestbook-app
 spec:
-    replicas: 2
+  replicas: 2
   selector:
     matchLabels:
-      app: front-end-guestbook
+      name: front-end-guestbook-pod
+      app: guest-app
   template:
     metadata:
+      name:  front-end-guestbook-pod
       labels:
-        app: front-end-guestbook
+        name: front-end-guestbook-pod
+        app: guestbook-app
     spec:
       containers:
       - name: guestbook
